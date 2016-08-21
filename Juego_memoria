@@ -1,0 +1,54 @@
+//Test
+
+import UIKit
+
+//Imprimir numero del 1 al 100.
+//Si es divisible entre 5 "Bingo!!!"
+//Si es par "par!!!"
+//Si es impar "impar!!!"
+//Si se encuentra entre 30 y 40 "viva Swift!!!"
+
+var rango = 1...100
+
+for i in rango {
+    
+    var par = i%2
+    var impar = (i+1)%2
+    var bingo = i%5
+    
+    var parB = ""
+    var imparB = ""
+    var bingB = ""
+    var vivaB = ""
+    
+    switch par {
+    case 0:
+        parB = " par!!!"
+    default:
+        parB = ""
+    }
+    
+    switch impar {
+    case 0:
+        imparB = " impar!!!"
+    default:
+        imparB = ""
+    }
+    
+    switch bingo {
+    case 0:
+        bingB = " bingo!!!"
+    default:
+        bingB = ""
+    }
+    
+    switch i {
+    case 30...40:
+        vivaB = " viva Swift!!!"
+    default:
+        vivaB = ""
+    }
+    
+    print("\(i)\(parB)\(imparB)\(bingB)\(vivaB)")
+
+}
